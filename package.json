@@ -1,7 +1,7 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "",
+  "description": "## Project: Auth API",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -26,5 +26,14 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.10.15",
     "morgan": "^1.10.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jennerdulce/auth-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jennerdulce/auth-api/issues"
+  },
+  "homepage": "https://github.com/jennerdulce/auth-api#readme"
 }

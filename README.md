@@ -6,9 +6,9 @@
 
 ### Links and Resources
 
-- [ci/cd](https://github.com/jennerdulce/bearer-auth/actions) (GitHub Actions)
-- [Pull Request](https://github.com/jennerdulce/bearer-auth/pull/2)
-- [HEROKU App](https://jennerdulce-bearer-auth.herokuapp.com/)
+- [ci/cd](https://github.com/jennerdulce/auth-api/actions) (GitHub Actions)
+- [Pull Request](https://github.com/jennerdulce/auth-api/pull/2)
+- [HEROKU App](https://jennerdulce-auth-api.herokuapp.com/)
 
 ### Setup
 
