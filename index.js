@@ -1,9 +1,8 @@
 'use strict';
 
 require('dotenv').config();
-
-// Start up DB Server
 const mongoose = require('mongoose');
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/generalGood'
 const options = {
   useNewUrlParser: true,
   useCreateIndex: true,

@@ -1,11 +1,11 @@
 'use strict';
 
-const supergoose = require('@code-fellows/supergoose');
-const base64 = require('base-64');
+require('dotenv').config();
+require('@code-fellows/supergoose');
+const supertest = require('supertest')
 const server = require('../src/server.js')
-const SECRET = process.env.SECRET || 'secret';
-
-const mockRequest = supergoose(server.app);
+const mockRequest = supertest(server.app);
+process.env.SECRET = 'secret';
 
 let user = {
   username: 'jdulce',
@@ -27,23 +27,17 @@ let hat = {
 
 
 describe('v2 ROUTE TESTS', () => {
-  it('should create a new user and send an object with the user and the token to the client', async () => {
+  it('should add an item to the DB and returns an object with the added item', async () => {
     const responseA = await mockRequest.post('/signup').send(user)
 
     const responseB = await mockRequest.post('/api/v2/clothes')
      .send(shirt)
      .set('Authorization', `Bearer ${responseA.body.token}`)
+
     expect(responseB.status).toBe(201);
     expect(responseB.body).toBeDefined();
   })
-
-  it('should sign in with basic authentication headers logs in a user and sends an object with the user and the token to the client', async () => {
-    const response = await mockRequest.post('/signin')
-    .auth('jdulce','password')
-    expect(response.body).toBeDefined();
-    expect(response.body.token).toBeDefined();
-  })
-
+  
   it('should return a list of :model items', async () => {
     const responseA = await mockRequest.post('/signin')
     .auth('jdulce','password')
