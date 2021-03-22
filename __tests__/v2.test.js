@@ -1,11 +1,12 @@
 'use strict';
 
-const supergoose = require('@code-fellows/supergoose');
+require('@code-fellows/supergoose');
+const supertest = require('supertest')
 const base64 = require('base-64');
 const server = require('../src/server.js')
-const SECRET = process.env.SECRET;
+const SECRET = process.env.SECRET || 'secret';
 
-const mockRequest = supergoose(server.app);
+const mockRequest = supertest(server.app);
 
 let user = {
   username: 'jdulce',
