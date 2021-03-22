@@ -3,7 +3,6 @@
 require('@code-fellows/supergoose');
 const supertest = require('supertest')
 const server = require('../src/server.js')
-
 const mockRequest = supertest(server.app);
 
 let user = {
