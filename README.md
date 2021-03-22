@@ -6,9 +6,9 @@
 
 ### Links and Resources
 
-- [ci/cd](https://github.com/jennerdulce/bearer-auth/actions) (GitHub Actions)
-- [Pull Request](https://github.com/jennerdulce/bearer-auth/pull/2)
-- [HEROKU App](https://jennerdulce-bearer-auth.herokuapp.com/)
+- [ci/cd](https://github.com/jennerdulce/auth-api/actions) (GitHub Actions)
+- [Pull Request](https://github.com/jennerdulce/auth-api/pull/3)
+- [HEROKU App](https://jennerdulce-auth-api.herokuapp.com/)
 
 ### Setup
 
@@ -16,7 +16,7 @@
 
 - `PORT` - 3000
 - `MONGODB_URI` - mongodb://localhost:27017/generalGood
-- `SECRET`
+- `SECRET` = secret
 
 #### How to initialize/run your application (where applicable)
 
@@ -35,9 +35,7 @@
 
 - POST /api/v2/:model with a bearer token that has create permissions adds an item to the DB and returns an object with the added item
 - GET /api/v2/:model with a bearer token that has read permissions returns a list of :model items
-
 - PUT /api/v2/:model/ID with a bearer token that has update permissions returns a single, updated item by ID
-
 - DELETE /api/v2/:model/ID with a bearer token that has delete permissions returns an empty object. Subsequent GET for the same ID should result in nothing found
 
 #### UML
