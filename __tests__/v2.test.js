@@ -5,7 +5,7 @@ require('@code-fellows/supergoose');
 const supertest = require('supertest')
 const server = require('../src/server.js')
 const mockRequest = supertest(server.app);
-const SECRET = process.env.SECRET || 'secret';
+process.env.SECRET || 'secret';
 
 let user = {
   username: 'jdulce',
