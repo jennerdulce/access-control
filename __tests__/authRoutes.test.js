@@ -1,10 +1,9 @@
 'use strict';
 
+require('dotenv').config();
 require('@code-fellows/supergoose');
 const supertest = require('supertest')
-const base64 = require('base-64');
 const server = require('../src/server.js')
-const SECRET = process.env.SECRET;
 
 const mockRequest = supertest(server.app);
 
